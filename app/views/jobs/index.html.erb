@@ -1,0 +1,32 @@
+<h1 class="well">How many jobs are in ...</h1>
+<div class="container">
+  <%= form_tag(root_path, method: "get") do %>
+    <h4>Key words <%= text_field_tag(:q) %></h4>
+
+    <h4>Location <%= text_field_tag(:l) %></h4>
+    <%= submit_tag("Search") %>
+  <% end %>
+
+  <%# @jobs.each do |job| %>
+    <h2> Total jobs </h2>
+  </h4><%= @jobs.location %> : <%= @jobs.total_results %></h4>
+  <%# end %>
+
+</div>
+
+  <!--
+  <ul>
+    <%# @results.each do |job| %>
+    <li>
+      <div>
+        <p><b><%#= link_to job.job_title, job.url, target: "_blank" %></b></p>
+        <p><%#= job.company %></p>
+        <p><%#= job.snippet %></p>
+        <p><%#= job.formatted_location %></p>
+        <p><%#= job.city %></p>
+      </div>
+    </li>
+    <hr>
+    <%# end %>
+  </ul>
+  -->
