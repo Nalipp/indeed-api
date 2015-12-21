@@ -3,15 +3,23 @@
   <%= form_tag(root_path, method: "get") do %>
     <h4>Key words <%= text_field_tag(:q) %></h4>
 
-    <h4>Location <%= text_field_tag(:l) %></h4>
+    <!--<h4>Location <%#= text_field_tag(:l) %></h4>-->
     <%= submit_tag("Search") %>
   <% end %>
 
-  <%# @jobs.each do |job| %>
-    <h2> Total jobs </h2>
-  </h4><%= @jobs.location %> : <%= @jobs.total_results %></h4>
-  <%# end %>
-
+  <h2> Showing jobs for <strong><%= @jobs.query %></strong></h2>
+  <h4>nationwide : <%= @jobs.total_results %> : <%#= @jobs.total_results %></h4>
+  <h4><%= @jobs_san_francisco.location %>  : <%= @jobs_san_francisco.total_results %></h4>
+  <h4><%= @jobs_new_york.location %>       : <%= @jobs_new_york.total_results %></h4>
+  <h4><%= @jobs_washington_dc.location %>  : <%= @jobs_washington_dc.total_results %></h4>
+  <h4><%= @jobs_boston.location %>         : <%= @jobs_boston.total_results %></h4>
+  <h4><%= @jobs_chicago.location %>        : <%= @jobs_chicago.total_results %></h4>
+  <h4><%= @jobs_los_angeles.location %>     : <%= @jobs_los_angeles.total_results %></h4>
+  <h4><%= @jobs_seattle.location %>        : <%= @jobs_seattle.total_results %></h4>
+  <h4><%= @jobs_denver.location %>         : <%= @jobs_denver.total_results %></h4>
+  <h4><%= @jobs_austin.location %>         : <%= @jobs_austin.total_results %></h4>
+  <h4><%= @jobs_portland.location %>       : <%= @jobs_portland.total_results %></h4>
+  <h4><%= @jobs_salt_lake_city.location %> : <%= @jobs_salt_lake_city.total_results %></h4>
 </div>
 
   <!--
