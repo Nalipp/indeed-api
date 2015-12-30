@@ -12,7 +12,7 @@ class JobsController < ApplicationController
       @jobs_portland       = IndeedAPI.search_jobs(q: params[:q], l: 'portland')
       @jobs_austin         = IndeedAPI.search_jobs(q: params[:q], l: 'austin')
       @jobs_washington_dc  = IndeedAPI.search_jobs(q: params[:q], l: 'washington dc')
-      @jobs_salt_lake_city = IndeedAPI.search_jobs(q: params[:q], l: 'salt lake city')
+      @jobs_dallas         = IndeedAPI.search_jobs(q: params[:q], l: 'dallas')
       @jobs_boston         = IndeedAPI.search_jobs(q: params[:q], l: 'boston')
     else
       render 'index'
